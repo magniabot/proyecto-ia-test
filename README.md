@@ -45,6 +45,18 @@ Si falta Node.js: descargarlo de [nodejs.org](https://nodejs.org) (versión LTS)
 
 ## 2. Setup paso a paso
 
+> ### 🚀 Vía rápida: dejá que Claude lo haga
+>
+> Si ya tenés **Node.js** y **Claude Code** instalados y el repositorio clonado, no hace falta que sigas los pasos manuales. Abrí el proyecto con Claude Code y escribí:
+>
+> ```
+> /setup
+> ```
+>
+> Diagnostica qué falta, instala las dependencias, configura la cuenta y verifica la conexión. Vos solo respondés preguntas.
+>
+> Los pasos de abajo son el detalle de lo que hace, por si preferís hacerlo a mano o necesitás entender qué pasó.
+
 ### Paso 1 — Clonar el repositorio
 
 ```bash
@@ -246,10 +258,11 @@ O simplemente, dentro de Claude Code:
 ### Al empezar con una cuenta nueva
 
 ```
-1. /business-context-gatherer    → completa context/business.md con una entrevista
-2. /ads-context-gatherer         → extrae contexto de marca desde el sitio web
-3. /gads-context                 → trae los datos de la cuenta
-4. /account-changelog            → trae los cambios recientes
+1. /setup                        → deja el entorno operativo
+2. /business-context-gatherer    → completa context/business.md con una entrevista
+3. /ads-context-gatherer         → extrae contexto de marca desde el sitio web
+4. /gads-context                 → trae los datos de la cuenta
+5. /account-changelog            → trae los cambios recientes
 ```
 
 Sin `business.md` completo —sobre todo la economía unitaria— los auditores no pueden juzgar si un CPA es bueno o malo. Es el primer paso, no un opcional.
@@ -303,6 +316,18 @@ Revisar `context/account-changelog.md`. Si hubo cambios en los últimos 7 días,
 ### Datos y contexto
 
 `/gads-context` · `/meta-context` · `/account-changelog` · `/business-context-gatherer` · `/ads-context-gatherer` · `/competitor-scraper`
+
+### Puesta en marcha
+
+`/setup` — diagnostica el estado del entorno, instala dependencias, configura la cuenta y verifica la conexión. Pensado para arrancar en una máquina nueva sin conocimientos técnicos.
+
+```
+/setup           Proceso completo
+/setup check     Solo diagnóstico, no modifica nada
+/setup deps      Solo instalar dependencias
+/setup account   Solo configurar la cuenta
+/setup verify    Solo probar la conexión
+```
 
 ---
 
