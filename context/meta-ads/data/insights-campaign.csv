@@ -1,0 +1,3 @@
+campaign_id,campaign_name,impressions,clicks,spend,reach,frequency,cpm,cpc,ctr,unique_clicks,unique_ctr,actions_link_click,actions_landing_page_view,actions_complete_registration,actions_lead,cpa_link_click,cpa_lead,cpa_complete_registration,cpa_landing_page_view,date_start,date_stop
+120241442017620559,Clientes Potenciales - Vista los Naranjos - Test Inicial 032026,132751,3750,460416,33664,3.943411,3468.267659,122.7776,2.824837,2440,7.248099,2117,1389,1,30,217.48512,15347.2,460416,331.473002,2026-03-30,2026-04-28
+120242846903870559,Clientes Potenciales Sitio Web - CBO - Vista Los Naranjos,64833,1801,281397,22385,2.89627,4340.33594,156.244864,2.777906,1178,5.262453,1286,829,2,30,218.815708,9379.9,140698.5,339.441496,2026-03-30,2026-04-28

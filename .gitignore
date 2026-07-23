@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────
+# CREDENCIALES — NUNCA versionar
+# Si alguna de estas llega al repositorio, rotar las llaves.
+# ─────────────────────────────────────────────────────────────
+config/.env
+config/.env.*
+!config/.env.example
+*.pem
+*.key
+*.p12
+*credentials*.json
+*service-account*.json
+
+# ─────────────────────────────────────────────────────────────
+# Dependencias — se reinstalan con npm install
+# ─────────────────────────────────────────────────────────────
+node_modules/
+package-lock.json
+
+# ─────────────────────────────────────────────────────────────
+# Configuración local de la máquina (no se comparte)
+# ─────────────────────────────────────────────────────────────
+.claude/settings.local.json
+
+# ─────────────────────────────────────────────────────────────
+# Temporales y respaldos locales
+# ─────────────────────────────────────────────────────────────
+.backup/
+tmp/
+.claude/skills/*/tmp/
+*.log
+
+# ─────────────────────────────────────────────────────────────
+# Sistema operativo
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

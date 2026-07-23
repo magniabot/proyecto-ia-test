@@ -1,0 +1,20 @@
+{
+  "project_label": "Vista Los Naranjos · Agrícola",
+  "channels": {
+    "meta_ads": true,
+    "google_ads": true
+  },
+  "conversations_mode": "ia",
+  "alerts": {
+    "cpl_threshold_warn": 50000,
+    "target_cpl": 15000,
+    "min_agendamientos_warn": 5
+  },
+  "pipeline_stages": [
+    { "name": "Nuevo Prospecto", "color": "#bac1e8" },
+    { "name": "Contacto Realizado", "color": "#8b8fc4" },
+    { "name": "Agendado", "color": "#5d57e0" },
+    { "name": "Visita Atendida", "color": "#453ede" },
+    { "name": "Reserva", "color": "#322ba8" }
+  ]
+}

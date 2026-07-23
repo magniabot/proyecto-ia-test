@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelas en Venta Valle del Elqui — Vista los Naranjos</title>
+    <style>
+        /* ============================================================
+           BRAND: Parcelas El Qui — Vista los Naranjos
+           AUDIENCE: Google Search (transaccional) — Solution Aware
+           GENERATED: 2026-04-17
+        ============================================================ */
+
+        :root {
+            --color-primary:        #0b2a0b;   /* dark green — headings, hero bg */
+            --color-secondary:      #1a4a1a;   /* mid green — hover states */
+            --color-accent:         #376a51;   /* CTA green */
+            --color-accent-hover:   #2d5a42;
+            --color-sage:           #637c63;   /* sage — section accents */
+            --color-bg:             #ffffff;
+            --color-bg-alt:         #f4f7f4;   /* light green-tinted sections */
+            --color-text:           #333333;
+            --color-text-light:     #666666;
+            --color-text-on-dark:   #ffffff;
+            --color-border:         #d4e0d4;
+            --color-gold:           #e8b84b;   /* stars / price urgency */
+            --color-green-light:    #a8d5a2;   /* light green on dark bg */
+
+            --font-heading: 'Arial Narrow', 'Arial', 'Impact', sans-serif;
+            --font-body:    Georgia, 'Times New Roman', serif;
+
+            --container-max:          1100px;
+            --section-padding:        80px 20px;
+            --section-padding-mobile: 48px 16px;
+            --border-radius:          8px;
+            --cta-padding:            18px 36px;
+            --cta-padding-mobile:     16px 24px;
+            --cta-font-size:          18px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- CONTAINER ---- */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- SECTIONS ---- */
+        section { padding: var(--section-padding); }
+        section:nth-child(even) { background: var(--color-bg-alt); }
+
+        /* ---- TYPOGRAPHY ---- */
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            line-height: 1.08;
+            font-weight: 900;
+            color: var(--color-text-on-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            line-height: 1.15;
+            font-weight: 800;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 16px; }
+        .text-center { text-align: center; }
+        .text-light  { color: var(--color-text-light); }
+
+        /* ---- URGENCY BAR ---- */
+        .urgency-bar {
+            background: var(--color-primary);
+            color: var(--color-text-on-dark);
+            text-align: center;
+            padding: 13px 20px;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .urgency-bar .hl { color: var(--color-green-light); }
+
+        /* ---- CTA BUTTON ---- */
+        .cta-button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-text-on-dark);
+            padding: var(--cta-padding);
+            font-size: var(--cta-font-size);
+            font-weight: 700;
+            font-family: var(--font-heading);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        .cta-button:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+        .cta-microcopy {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--color-text-light);
+            margin-top: 10px;
+            font-family: var(--font-body);
+        }
+
+        /* ---- PLACEHOLDER ---- */
+        .placeholder {
+            border: 2px dashed var(--color-border);
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--color-text-light);
+            font-style: italic;
+            font-size: 0.9rem;
+            background: var(--color-bg-alt);
+        }
+
+        /* ---- GRIDS ---- */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+        /* ---- BENEFIT CARD ---- */
+        .card {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            border-top: 4px solid var(--color-accent);
+            padding: 28px 24px;
+        }
+        .card p { color: var(--color-text-light); font-size: 0.97rem; margin-bottom: 0; }
+
+        /* ---- TRUST NUMBERS ---- */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 56px;
+            flex-wrap: wrap;
+            padding: 32px 0;
+        }
+        .trust-item { text-align: center; min-width: 130px; }
+        .trust-number {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .trust-label { font-size: 0.88rem; color: var(--color-text-light); margin-top: 6px; line-height: 1.4; }
+        .stars { color: var(--color-gold); font-size: 1.5rem; line-height: 1; }
+
+        /* ---- PROCESS STEPS ---- */
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+            margin: 32px 0;
+            counter-reset: step;
+        }
+        .step {
+            flex: 1;
+            min-width: 170px;
+            max-width: 220px;
+            text-align: center;
+            padding: 16px 12px;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -6px;
+            top: 28px;
+            font-size: 1.4rem;
+            color: var(--color-sage);
+        }
+        .step-number {
+            width: 44px; height: 44px;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+        .step-title { font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; color: var(--color-primary); font-size: 0.9rem; letter-spacing: 0.03em; }
+        .step-desc  { font-size: 0.82rem; color: var(--color-text-light); margin-top: 4px; line-height: 1.45; }
+
+        /* ---- TESTIMONIAL ---- */
+        .testimonial {
+            background: var(--color-bg);
+            border-left: 4px solid var(--color-accent);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            padding: 28px 28px 20px;
+        }
+        .testimonial-text   { font-style: italic; font-size: 1.02rem; color: var(--color-text); line-height: 1.7; margin-bottom: 16px; }
+        .testimonial-author { font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; color: var(--color-primary); font-size: 0.95rem; letter-spacing: 0.02em; }
+        .testimonial-role   { font-size: 0.85rem; color: var(--color-text-light); }
+        .testimonial-note   { font-size: 0.78rem; color: #bbb; margin-top: 6px; margin-bottom: 0; }
+
+        /* ---- STATS BAR (dark) ---- */
+        .stats-bar {
+            background: var(--color-primary);
+            border-radius: var(--border-radius);
+            padding: 32px 40px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 24px;
+            text-align: center;
+        }
+        .stat-number { font-family: var(--font-heading); font-size: 1.9rem; font-weight: 900; color: var(--color-green-light); line-height: 1; }
+        .stat-label  { color: rgba(255,255,255,0.7); font-size: 0.87rem; margin-top: 6px; line-height: 1.45; }
+
+        /* ---- FAQ ---- */
+        .faq-item { border-bottom: 1px solid var(--color-border); padding: 24px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--color-primary);
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .faq-answer { color: var(--color-text); line-height: 1.7; margin-bottom: 0; font-size: 0.97rem; }
+
+        /* ---- GUARANTEE BOX ---- */
+        .guarantee-box {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-accent);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            padding: 24px 28px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .guarantee-title {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            margin-bottom: 8px;
+        }
+
+        /* ---- UNITS VISUAL ---- */
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 8px;
+            max-width: 380px;
+            margin: 24px auto 8px;
+        }
+        .unit {
+            height: 38px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .unit-sold      { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.35); }
+        .unit-available { background: var(--color-accent); color: #fff; }
+
+        /* ---- PRICE BADGE ---- */
+        .price-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: var(--color-green-light);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+            border: 1px solid rgba(168,213,162,0.3);
+        }
+
+        /* ---- HERO SPECS STRIP ---- */
+        .hero-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 20px 0 28px;
+        }
+        .hero-spec {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.85);
+        }
+        .hero-spec-dot {
+            width: 8px; height: 8px;
+            background: var(--color-green-light);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ---- FINAL CTA CHECKLIST ---- */
+        .value-list { list-style: none; text-align: left; max-width: 540px; margin: 0 auto 40px; }
+        .value-list li {
+            padding: 11px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+            color: rgba(255,255,255,0.92);
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .value-list li:last-child { border-bottom: none; }
+        .value-check { color: var(--color-green-light); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            section  { padding: var(--section-padding-mobile); }
+            h1       { font-size: 2.1rem; }
+            h2       { font-size: 1.65rem; }
+            .grid-2, .grid-3  { grid-template-columns: 1fr; }
+            .cta-button       { display: block; width: 100%; text-align: center; padding: var(--cta-padding-mobile); }
+            .trust-bar        { gap: 28px; }
+            .step::after      { display: none; }
+            .units-grid       { grid-template-columns: repeat(5, 1fr); }
+            .stats-bar        { padding: 24px; gap: 20px; }
+            .hero-specs       { gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     URGENCY BAR
+============================================================ -->
+<div class="urgency-bar">
+    &#9889;&nbsp; Solo <span class="hl">9 parcelas disponibles</span>
+    &nbsp;·&nbsp; Precio único de lanzamiento
+    &nbsp;·&nbsp; Primeras 3 unidades: <span class="hl">$70MM con bono</span>
+</div>
+
+
+<!-- ============================================================
+     SECTION 1 — HERO
+     Transaccional directo: keyword + precio + escasez above fold
+============================================================ -->
+<section id="hero" style="background: var(--color-primary); padding-top: 72px; padding-bottom: 72px;">
+    <div class="container">
+        <div class="grid-2" style="gap: 48px;">
+
+            <!-- LEFT: Copy -->
+            <div>
+                <div class="price-badge">Vista los Naranjos &nbsp;·&nbsp; Valle del Elqui</div>
+
+                <h1>Parcelas en<br>Venta en el<br>Valle del Elqui</h1>
+
+                <!-- Key specs strip -->
+                <div class="hero-specs">
+                    <div class="hero-spec"><span class="hero-spec-dot"></span> 9 disponibles</div>
+                    <div class="hero-spec"><span class="hero-spec-dot"></span> Desde $70MM</div>
+                    <div class="hero-spec"><span class="hero-spec-dot"></span> Rol propio</div>
+                    <div class="hero-spec"><span class="hero-spec-dot"></span> Entrega inmediata</div>
+                    <div class="hero-spec"><span class="hero-spec-dot"></span> 20 min de La Serena</div>
+                </div>
+
+                <p style="color: rgba(255,255,255,0.78); font-size: 1.05rem; margin-bottom: 32px; line-height: 1.65;">
+                    Parcelas de 5.000 m² con plataformas ya construidas, red de agua disponible y seguridad desde el día 1. Listo para que llegues y construyas tu proyecto en el Valle del Elqui.
+                </p>
+
+                <a href="#cta" class="cta-button" style="font-size: 1.1rem;">
+                    ¡Quiero agendar una visita!
+                </a>
+                <span class="cta-microcopy" style="color: rgba(255,255,255,0.5);">
+                    Sin compromiso &nbsp;·&nbsp; Asesor disponible lunes a sábado
+                </span>
+            </div>
+
+            <!-- RIGHT: Visual -->
+            <div>
+                <div class="placeholder" style="height: 400px; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; text-align: center; padding: 32px;">
+                    [Fotografía aérea drone — Vista los Naranjos<br>Valle del Elqui, cerros y cielo despejado<br><br>Reemplazar con foto real de alta resolución<br>Ratio recomendado: 4:3 o 16:9]
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2 — BENEFITS
+     6 outcomes — functional + personal + business angles
+============================================================ -->
+<section id="beneficios">
+    <div class="container">
+        <h2 class="text-center">Lo que incluye tu parcela en Vista los Naranjos</h2>
+        <p class="text-center text-light" style="max-width: 640px; margin: 0 auto 48px; font-size: 1.05rem; line-height: 1.7;">
+            No es un proyecto en papel. Las plataformas están construidas. El agua está disponible. Solo falta que llegues.
+        </p>
+
+        <div class="grid-3">
+
+            <div class="card">
+                <h3>5.000 m² listos para construir</h3>
+                <p>Plataformas ya construidas. Llega y planifica sin contratar maquinaria ni esperar obras de preparación. El terreno está listo desde el primer día.</p>
+            </div>
+
+            <div class="card">
+                <h3>Solo 10 propietarios</h3>
+                <p>La comunidad más íntima del Valle del Elqui. Todos se conocen. Sin conflictos de administración. Cada parcela tiene su propio Rol de Bienes Raíces.</p>
+            </div>
+
+            <div class="card">
+                <h3>Seguridad desde el día 1</h3>
+                <p>Cierre perimetral completo + cámaras instaladas antes de que firmes. Tu inversión protegida desde el inicio, sin esperar que lleguen los vecinos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Vista privilegiada al Valle</h3>
+                <p>Pendiente mínima, vista abierta al Valle del Elqui. El atributo diferenciador del proyecto — no todos los terrenos de la zona ofrecen esto.</p>
+            </div>
+
+            <div class="card">
+                <h3>Red de agua disponible hoy</h3>
+                <p>Contrato de suministro de agua incluido desde la escritura. Sin incertidumbre ni racionamiento — el recurso más crítico en proyectos rurales, resuelto.</p>
+            </div>
+
+            <div class="card">
+                <h3>A 20 minutos de La Serena</h3>
+                <p>15 min del Aeropuerto La Serena. 30 min de la playa. En el Valle del Elqui, pero conectado con todo lo que necesitas.</p>
+            </div>
+
+        </div>
+
+        <div class="text-center" style="margin-top: 48px;">
+            <a href="#cta" class="cta-button">¡Quiero agendar una visita!</a>
+            <span class="cta-microcopy">Conoce el proyecto en persona. Sin compromiso.</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3 — TRUST / AUTHORITY
+     Empresa con historial. Proyecto anterior 100% vendido.
+============================================================ -->
+<section id="confianza">
+    <div class="container">
+        <h2 class="text-center">El mismo equipo que agotó el proyecto anterior</h2>
+        <p class="text-center text-light" style="max-width: 580px; margin: 0 auto 8px; font-size: 1rem;">
+            Vista los Naranjos es el segundo proyecto de Parcelas El Qui en el Valle del Elqui. El primero se vendió al 100%.
+        </p>
+
+        <!-- Trust numbers -->
+        <div class="trust-bar">
+
+            <div class="trust-item">
+                <div class="trust-number">100%</div>
+                <div class="trust-label">Proyecto anterior<br>vendido en su totalidad</div>
+            </div>
+
+            <div class="trust-item">
+                <div class="stars">★★★★★</div>
+                <div class="trust-label" style="margin-top: 8px;">"El mejor proyecto del Elqui"<br>Calificación compradores anteriores</div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-number" style="font-size: 1.4rem;">Hoy</div>
+                <div class="trust-label">Escritura en notaría<br>el mismo día de la firma</div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-number">Rol Propio</div>
+                <div class="trust-label">Garantía legal individual<br>por cada parcela</div>
+            </div>
+
+        </div>
+
+        <!-- Process steps -->
+        <h3 class="text-center" style="color: var(--color-text-light); font-size: 0.82rem; letter-spacing: 0.1em; margin: 24px 0 4px;">ASÍ FUNCIONA EL PROCESO</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-title">Visita al proyecto</div>
+                <div class="step-desc">Conoces el terreno en persona y eliges el que quieras</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-title">Reserva</div>
+                <div class="step-desc">Se aparta tu parcela mientras se gestiona el financiamiento</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-title">Escritura</div>
+                <div class="step-desc">Firma en notaría — transferencia inmediata y Rol Propio en mano</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-title">Tu parcela</div>
+                <div class="step-desc">Llega cuando quieras — plataforma lista, agua disponible</div>
+            </div>
+        </div>
+
+        <div class="placeholder" style="max-width: 640px; margin: 8px auto 0;">
+            [Foto del equipo de Parcelas El Qui o ceremonia de escritura con compradores del proyecto anterior — reemplazar con imagen real]
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4 — SOCIAL PROOF
+     Testimonios del proyecto anterior (empresa, no proyecto)
+============================================================ -->
+<section id="testimonios">
+    <div class="container">
+        <h2 class="text-center">Lo que dijeron los compradores del proyecto anterior</h2>
+        <p class="text-center text-light" style="max-width: 580px; margin: 0 auto 40px; font-size: 0.95rem;">
+            Vista los Naranjos es nuevo — estas son las experiencias con el mismo equipo en el proyecto anterior del Valle del Elqui.
+        </p>
+
+        <div class="grid-2" style="gap: 24px; align-items: start;">
+
+            <div class="testimonial">
+                <p class="testimonial-text">"Busqué durante dos años un terreno con agua garantizada y Rol Propio en el Valle del Elqui. El equipo de Parcelas El Qui fue el único que cumplió todo sin excepciones. Ya tenemos los planos listos para construir."</p>
+                <p class="testimonial-author">[Nombre Apellido]</p>
+                <p class="testimonial-role">[Ciudad · Ocupación] &nbsp;·&nbsp; Comprador proyecto anterior</p>
+                <p class="testimonial-note">[Reemplazar con nombre real, foto y resultado específico del comprador]</p>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">"Trabajo en minería en el norte. Quería algo cerca de La Serena, listo para construir sin esperar obras. La plataforma ya hecha fue lo que cerró la decisión. Firmamos ese mismo mes y fue todo lo que nos prometieron."</p>
+                <p class="testimonial-author">[Nombre Apellido]</p>
+                <p class="testimonial-role">[Ciudad · Ocupación] &nbsp;·&nbsp; Comprador proyecto anterior</p>
+                <p class="testimonial-note">[Reemplazar con nombre real, foto y resultado específico del comprador]</p>
+            </div>
+
+        </div>
+
+        <!-- Stats bar -->
+        <div class="stats-bar">
+            <div>
+                <div class="stat-number">9 de 10</div>
+                <div class="stat-label">parcelas disponibles<br>en Vista los Naranjos</div>
+            </div>
+            <div>
+                <div class="stat-number">$70MM</div>
+                <div class="stat-label">precio con bono<br>primeras 3 unidades</div>
+            </div>
+            <div>
+                <div class="stat-number">$80–105MM</div>
+                <div class="stat-label">proyectos comparables<br>en el Valle del Elqui</div>
+            </div>
+            <div>
+                <div class="stat-number">5.000 m²</div>
+                <div class="stat-label">por parcela<br>con plataformas listas</div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="#cta" class="cta-button">¡Quiero agendar una visita!</a>
+            <span class="cta-microcopy">Conoce el proyecto en persona. Sin compromiso.</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5 — OBJECTION HANDLING / FAQ
+     Electricidad · Financiamiento · Garantías legales · Precio
+============================================================ -->
+<section id="preguntas">
+    <div class="container" style="max-width: 840px;">
+        <h2 class="text-center">Preguntas frecuentes</h2>
+        <p class="text-center text-light" style="margin: 0 auto 40px;">
+            Las preguntas que nos hacen en cada visita — respondidas por adelantado.
+        </p>
+
+        <div>
+
+            <div class="faq-item">
+                <p class="faq-question">¿La electricidad está disponible en el proyecto?</p>
+                <p class="faq-answer">La red eléctrica está en proceso de construcción, con proyección de conexión definitiva en <strong>1 año</strong>. Lo que sí está disponible desde el día 1: <strong>red de agua con contrato de suministro</strong>, caminos construidos, portón de acceso automático y cierre perimetral. Varios compradores del proyecto anterior construyeron durante este período usando paneles solares. Te explicamos todas las alternativas en la visita.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">¿Puedo comprar con crédito hipotecario o subsidio?</p>
+                <p class="faq-answer">Sí. Cada parcela tiene <strong>Rol Propio individual</strong>, lo que la hace elegible para financiamiento bancario. El proceso hipotecario toma entre 5 y 6 meses — por eso arrancar la gestión ahora es crítico si quieres aprovechar el precio de lanzamiento antes de que los valores se diferencien por lote.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">¿Qué certeza legal tengo de la compra?</p>
+                <p class="faq-answer">Certeza total. Cada parcela tiene su propio <strong>Rol de Bienes Raíces</strong> (no copropiedad — cada propietario tiene su escritura individual). La escritura se firma en notaría el mismo día. La transferencia es inmediata. No hay promesas ni períodos de espera: lo que acuerdas en el contrato es lo que recibes ese día.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">¿Por qué $75MM si hay proyectos más baratos en la zona?</p>
+                <p class="faq-answer">Los proyectos comparables en el Valle del Elqui se venden entre <strong>$80M y $105M</strong>. El precio de lanzamiento de Vista los Naranjos — $75MM, o $70MM con bono para las primeras 3 unidades — es el precio más bajo que tendrá el proyecto. Después del lanzamiento los valores subirán y se diferenciarán por lote según vista y ubicación. Quien llega primero, compra al menor precio y elige el mejor terreno.</p>
+            </div>
+
+        </div>
+
+        <!-- Guarantee box -->
+        <div class="guarantee-box">
+            <p class="guarantee-title">&#10003; &nbsp; Nuestra garantía</p>
+            <p style="color: var(--color-text); margin-bottom: 0;">
+                Rol Propio individual en cada parcela. Escritura en notaría. Entrega inmediata el mismo día de la firma. Sin excepciones, sin sorpresas post-venta.
+            </p>
+        </div>
+
+        <div class="text-center" style="margin-top: 36px;">
+            <a href="#cta" class="cta-button">¡Quiero agendar una visita!</a>
+            <span class="cta-microcopy">Resolvemos todas tus dudas en persona. Sin compromiso.</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6 — URGENCY / SCARCITY
+     9 unidades · Precio único de lanzamiento · Primero elige
+============================================================ -->
+<section id="urgencia" style="background: var(--color-primary); padding-top: 72px; padding-bottom: 72px;">
+    <div class="container text-center">
+
+        <h2 style="color: var(--color-text-on-dark);">El primero en llegar elige su terreno</h2>
+
+        <p style="color: rgba(255,255,255,0.78); font-size: 1.05rem; max-width: 640px; margin: 20px auto 36px; line-height: 1.7;">
+            Vista los Naranjos tiene 10 parcelas en total, y <strong style="color: var(--color-green-light);">solo 9 disponibles</strong>. El proyecto tiene precio único de lanzamiento — todos los lotes al mismo valor durante esta ventana. Después del lanzamiento, los precios subirán y se diferenciarán por lote según vista y ubicación.<br><br>
+            Hay mucha diferencia entre el mejor y el peor terreno. Quien llega primero elige cualquiera.
+        </p>
+
+        <!-- Units visual -->
+        <div class="units-grid">
+            <div class="unit unit-sold">✓</div>
+            <div class="unit unit-available">01</div>
+            <div class="unit unit-available">02</div>
+            <div class="unit unit-available">03</div>
+            <div class="unit unit-available">04</div>
+            <div class="unit unit-available">05</div>
+            <div class="unit unit-available">06</div>
+            <div class="unit unit-available">07</div>
+            <div class="unit unit-available">08</div>
+            <div class="unit unit-available">09</div>
+        </div>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-bottom: 36px; letter-spacing: 0.05em;">
+            1 PARCELA VENDIDA &nbsp;·&nbsp; 9 DISPONIBLES
+        </p>
+
+        <!-- Price callout -->
+        <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(168,213,162,0.25); border-radius: var(--border-radius); padding: 20px 40px; display: inline-block; margin-bottom: 36px;">
+            <p style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">
+                Precio lanzamiento: <span style="color: var(--color-green-light);">$75MM</span>
+                &nbsp;·&nbsp;
+                Con bono (primeras 3): <span style="color: var(--color-green-light);">$70MM</span>
+            </p>
+        </div>
+
+        <br>
+        <a href="#cta" class="cta-button" style="background: var(--color-bg); color: var(--color-primary); font-size: 1.1rem;">
+            ¡Quiero elegir mi terreno hoy!
+        </a>
+        <span class="cta-microcopy" style="color: rgba(255,255,255,0.45);">
+            Sin compromiso &nbsp;·&nbsp; Asesor disponible lunes a sábado
+        </span>
+
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 7 — FINAL CTA
+     Value recap + formulario placeholder + CTA más fuerte
+============================================================ -->
+<section id="cta" style="background: var(--color-accent); padding-top: 80px; padding-bottom: 80px;">
+    <div class="container text-center" style="max-width: 740px;">
+
+        <h2 style="color: #ffffff; font-size: 2.6rem;">Tu parcela en el Valle del Elqui</h2>
+        <p style="color: rgba(255,255,255,0.82); font-size: 1.05rem; margin: 12px 0 36px;">
+            Agendas la visita. Conoces el terreno. Luego decides.
+        </p>
+
+        <ul class="value-list">
+            <li><span class="value-check">&#10003;</span> 5.000 m² con plataformas ya construidas — llega y construye</li>
+            <li><span class="value-check">&#10003;</span> Solo 10 propietarios — comunidad íntima, seguridad desde el día 1</li>
+            <li><span class="value-check">&#10003;</span> Red de agua disponible &nbsp;·&nbsp; Rol Propio &nbsp;·&nbsp; Escritura inmediata</li>
+            <li><span class="value-check">&#10003;</span> Vista privilegiada al Valle &nbsp;·&nbsp; A 20 min de La Serena</li>
+            <li><span class="value-check">&#10003;</span> Precio único de lanzamiento desde <strong>$70MM</strong> — sube después del lanzamiento</li>
+        </ul>
+
+        <a href="#" class="cta-button" style="background: var(--color-primary); font-size: 1.25rem; padding: 22px 52px;">
+            ¡Quiero agendar una visita!
+        </a>
+        <span class="cta-microcopy" style="color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 14px;">
+            Sin compromiso &nbsp;·&nbsp; Asesor disponible lunes a sábado<br>
+            Agendas la visita, conoces el terreno, luego decides.
+        </span>
+
+        <!-- Form placeholder -->
+        <div class="placeholder" style="margin: 40px auto 0; max-width: 500px; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.6); padding: 36px 24px;">
+            [Formulario GHL — 3 campos: Nombre completo · Teléfono · Email<br>
+            CTA del formulario: "Agendar mi visita →"<br>
+            Conectar a workflow de GHL para Vista los Naranjos]
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

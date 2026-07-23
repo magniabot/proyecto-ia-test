@@ -1,0 +1,26 @@
+[
+  {
+    "id": "BID-D18",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No ignored modifiers on smart bidding."
+  },
+  {
+    "id": "BID-D19",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No device modifiers on manual CPC."
+  },
+  {
+    "id": "BID-D20",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No location/schedule modifiers on manual CPC."
+  },
+  {
+    "id": "BID-D21",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No audience modifiers on manual CPC."
+  }
+]

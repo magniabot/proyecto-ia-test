@@ -1,0 +1,36 @@
+{
+  "mode": "ads-only",
+
+  "adset_id": "120241442136970559",
+  "destination_url": "https://venta.parcelaselqui.com/home-page",
+
+  "ads": [
+    {
+      "name": "Captación 10 propietarios 1:1 — USPs",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_captacion_10-propietarios_1_1.jpg",
+      "primary_text": "Vista los Naranjos no es un proyecto más. Son solo 10 propietarios, cierre perimetral instalado, cámaras desde el día 1 y plataformas ya construidas. Llegas y planificas — sin maquinaria extra, sin sorpresas. 5.000m² con vista privilegiada al Valle del Elqui. Agenda tu visita.",
+      "headline": "Vista privilegiada al Elqui",
+      "description": "Comunidad de solo 10 vecinos",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "name": "Captación 10 propietarios 4:5 — Cold",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_captacion_10-propietarios_4_5.jpg",
+      "primary_text": "Turnos largos, entornos áridos, y todo es trabajo — sin un espacio que sea tuyo. Vista los Naranjos cambia eso: 5.000m² propios en el Valle del Elqui, a 20 min de La Serena. Comunidad de solo 10 propietarios, plataformas listas para construir desde el día 1. Agenda tu visita.",
+      "headline": "Trabajas duro. Mereces esto.",
+      "description": "Solo 9 parcelas disponibles",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "name": "Urgencia 9 disponibles 1:1 — Hot",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_retargeting_9-disponibles_1_1.jpg",
+      "primary_text": "Precio único de lanzamiento: $75M por 5.000m² en el Elqui. Las primeras 3 unidades tienen un bono adicional de $5M. Quedan 9 de 10 parcelas — y quien llega primero elige el terreno que quiera. Hay mucha diferencia entre el mejor y el peor lote. Agenda tu visita antes de que sea tarde.",
+      "headline": "El primero elige su terreno",
+      "description": "Precio único de lanzamiento",
+      "cta": "LEARN_MORE"
+    }
+  ]
+}

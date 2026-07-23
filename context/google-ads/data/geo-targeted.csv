@@ -1,0 +1,4 @@
+campaign.name,campaign.resource_name,campaign_criterion.location.geo_target_constant,campaign_criterion.resource_name,location_view.resource_name,metrics.clicks,metrics.conversions,metrics.conversions_value,metrics.cost,metrics.impressions
+Agrícola I Search I NB,customers/4760314854/campaigns/22635254582,geoTargetConstants/2152,customers/4760314854/campaignCriteria/22635254582~2152,customers/4760314854/locationViews/22635254582~2152,0,0,0,0.00,0
+Agrícola I Search I NB Test Landing Page,customers/4760314854/campaigns/22764262259,geoTargetConstants/2152,customers/4760314854/campaignCriteria/22764262259~2152,customers/4760314854/locationViews/22764262259~2152,0,0,0,0.00,0
+Agrícola I Search I NB I Vista Los Naranjos,customers/4760314854/campaigns/23678356500,geoTargetConstants/2152,customers/4760314854/campaignCriteria/23678356500~2152,customers/4760314854/locationViews/23678356500~2152,0,0,0,0.00,0

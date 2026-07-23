@@ -1,0 +1,2 @@
+conversion_action.category,conversion_action.counting_type,conversion_action.name,conversion_action.primary_for_goal,conversion_action.resource_name,conversion_action.status,conversion_action.type,metrics.all_conversions,metrics.all_conversions_value
+14,3,GHL - Agendamiento de Visita a terreno,false,customers/4760314854/conversionActions/7147714499,2,7,30,30

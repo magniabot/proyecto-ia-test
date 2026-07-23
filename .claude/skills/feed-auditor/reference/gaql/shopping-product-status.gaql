@@ -1,0 +1,25 @@
+SELECT
+  shopping_product.resource_name,
+  shopping_product.merchant_center_id,
+  shopping_product.channel,
+  shopping_product.language_code,
+  shopping_product.feed_label,
+  shopping_product.target_countries,
+  shopping_product.item_id,
+  shopping_product.title,
+  shopping_product.brand,
+  shopping_product.status,
+  shopping_product.category_level1,
+  shopping_product.category_level2,
+  shopping_product.category_level3,
+  shopping_product.category_level4,
+  shopping_product.category_level5,
+  shopping_product.condition,
+  shopping_product.availability,
+  shopping_product.price_micros,
+  shopping_product.currency_code,
+  shopping_product.issues
+FROM shopping_product
+WHERE shopping_product.merchant_center_id = {MERCHANT_ACCOUNT_ID}
+  {RUN_FILTERS}
+ORDER BY shopping_product.status

@@ -1,0 +1,9 @@
+SELECT
+  campaign.id,
+  campaign.name,
+  campaign.status,
+  campaign_conversion_goal.category,
+  campaign_conversion_goal.origin,
+  campaign_conversion_goal.biddable
+FROM campaign_conversion_goal
+WHERE campaign.status != 'REMOVED'

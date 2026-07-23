@@ -1,0 +1,38 @@
+[
+  {
+    "id": "BID-D14",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "No portfolio strategies in account."
+  },
+  {
+    "id": "BID-D15",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No CPC caps set on smart bidding."
+  },
+  {
+    "id": "BID-D16",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "CPC cap vs. top-keyword CPCs comparison: rerun /keyword-auditor performance and compare top-quartile CPCs against any active caps."
+  },
+  {
+    "id": "BID-D17",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No shared-budget + portfolio conflicts detected."
+  },
+  {
+    "id": "BID-D25",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "No conversion value rules present."
+  },
+  {
+    "id": "BID-D26",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "No conversion value rules present."
+  }
+]

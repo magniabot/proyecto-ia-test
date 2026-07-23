@@ -1,0 +1,38 @@
+{
+  "mode": "full-setup",
+  "input": "context/meta-ads/upload-briefs/20260323_vista-los-naranjos_full-setup.json",
+  "dry_run": false,
+  "created_at": "2026-03-23T22:53:13.752Z",
+  "campaign_id": "120241442017620559",
+  "adsets": {
+    "control": "120241442136970559",
+    "test": "120241442137780559"
+  },
+  "ads": [],
+  "errors": [
+    {
+      "name": "Captación 10 propietarios 1:1 — USPs",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    },
+    {
+      "name": "Captación 10 propietarios 4:5 — Cold",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    },
+    {
+      "name": "Urgencia 9 disponibles 1:1 — Hot",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    },
+    {
+      "name": "Urgencia 9 disponibles 4:5 — Hot",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    },
+    {
+      "name": "Sin sorpresas 1:1 — Risk Removal",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    },
+    {
+      "name": "Sin sorpresas 4:5 — Risk Removal",
+      "error": "[100] (#100) Param instagram_actor_id must be a valid Instagram account id"
+    }
+  ]
+}

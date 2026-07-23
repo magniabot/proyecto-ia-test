@@ -1,0 +1,11 @@
+{
+  "name": "feed-auditor-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Read-only Merchant API, GAQL pull, and diagnostics scripts for feed-auditor",
+  "scripts": {
+    "pull": "node pull-data.js",
+    "analyze": "node analyze.js"
+  }
+}

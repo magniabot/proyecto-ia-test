@@ -1,0 +1,35 @@
+{
+  "_instructions": "Template for ads-only mode (add ads to an existing ad set). Get the adset_id from context/meta-ads/data/adsets.csv or Ads Manager. Remove the _instructions key before using.",
+  "mode": "ads-only",
+
+  "adset_id": "ADSET_ID_EXISTENTE",
+  "_adset_note": "ID del ad set donde subir los anuncios. Encontrar en context/meta-ads/data/adsets.csv columna 'id'.",
+
+  "page_id": "FACEBOOK_PAGE_ID_DEL_CLIENTE",
+  "instagram_account_id": "INSTAGRAM_BUSINESS_ACCOUNT_ID",
+  "_instagram_note": "Opcional.",
+  "destination_url": "https://tu-funnel-de-meta.com/pagina",
+
+  "ads": [
+    {
+      "name": "Nueva Creatividad — Imagen A",
+      "format": "image",
+      "image_hash": "HASH_DE_IMAGEN",
+      "primary_text": "Texto del anuncio...",
+      "headline": "Título del anuncio",
+      "description": "Descripción opcional",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "_note": "Ejemplo con image_path para subir imagen desde archivo local",
+      "name": "Nueva Creatividad — Imagen B",
+      "format": "image",
+      "image_path": "context/meta-ads/creatives/imagen-b.jpg",
+      "_image_path_note": "Ruta relativa desde la raíz del workspace del cliente.",
+      "primary_text": "Otro ángulo de copy...",
+      "headline": "Otro título",
+      "description": "Desc corta",
+      "cta": "LEARN_MORE"
+    }
+  ]
+}

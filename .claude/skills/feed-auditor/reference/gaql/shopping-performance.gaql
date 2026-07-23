@@ -1,0 +1,41 @@
+SELECT
+  campaign.name,
+  campaign.id,
+  segments.product_merchant_id,
+  segments.product_item_id,
+  segments.product_title,
+  segments.product_brand,
+  segments.product_category_level1,
+  segments.product_category_level2,
+  segments.product_category_level3,
+  segments.product_category_level4,
+  segments.product_category_level5,
+  segments.product_type_l1,
+  segments.product_type_l2,
+  segments.product_type_l3,
+  segments.product_type_l4,
+  segments.product_type_l5,
+  segments.product_feed_label,
+  segments.product_country,
+  segments.product_language,
+  segments.product_channel,
+  segments.product_condition,
+  segments.product_custom_attribute0,
+  segments.product_custom_attribute1,
+  segments.product_custom_attribute2,
+  segments.product_custom_attribute3,
+  segments.product_custom_attribute4,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.ctr,
+  metrics.cost_micros,
+  metrics.conversions,
+  metrics.conversions_value,
+  metrics.average_cpc,
+  metrics.cost_per_conversion
+FROM shopping_performance_view
+WHERE segments.date {DATE_RANGE}
+  AND segments.product_merchant_id = {MERCHANT_ACCOUNT_ID}
+  AND metrics.impressions > 0
+  {RUN_FILTERS}
+ORDER BY metrics.cost_micros DESC

@@ -1,0 +1,10 @@
+{
+  "name": "feed-optimizer-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "CSV-only feed transformation planning scripts for feed-optimizer",
+  "scripts": {
+    "plan": "node plan.js"
+  }
+}

@@ -1,0 +1,4 @@
+campaign.advertising_channel_type,campaign.id,campaign.name,campaign.resource_name,metrics.average_cpc,metrics.clicks,metrics.conversions,metrics.conversions_value,metrics.cost,metrics.cost_per_conversion,metrics.ctr,metrics.impressions,segments.device
+2,23678661534,Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,603.49,643,13,0,388043.24,29849.48,0.19148302561048244,3358,2
+2,23678661534,Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,788.93,170,3,0,134118.67,44706.22,0.1905829596412556,892,4
+2,23678661534,Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,526.20,5,0,0,2631.00,,0.1724137931034483,29,3

@@ -1,0 +1,10 @@
+{
+  "name": "meta-bulk-uploader-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Meta Marketing API bulk upload scripts",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

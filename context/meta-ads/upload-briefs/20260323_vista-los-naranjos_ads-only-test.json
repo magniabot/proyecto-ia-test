@@ -1,0 +1,36 @@
+{
+  "mode": "ads-only",
+
+  "adset_id": "120241442137780559",
+  "destination_url": "https://venta.parcelaselqui.com/home-page",
+
+  "ads": [
+    {
+      "name": "Urgencia 9 disponibles 4:5 — Hot",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_retargeting_9-disponibles_4_5.jpg",
+      "primary_text": "Precio único de lanzamiento: $75M por 5.000m² en el Elqui. Las primeras 3 unidades tienen un bono adicional de $5M. Quedan 9 de 10 parcelas — y quien llega primero elige el terreno que quiera. Hay mucha diferencia entre el mejor y el peor lote. Agenda tu visita antes de que sea tarde.",
+      "headline": "El primero elige su terreno",
+      "description": "Precio único de lanzamiento",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "name": "Sin sorpresas 1:1 — Risk Removal",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_retargeting_sin-sorpresas_1_1.jpg",
+      "primary_text": "Agua disponible, plataformas construidas, cierre perimetral listo. Rol propio por cada parcela y transferencia inmediata. Nuestro proyecto anterior se vendió al 100%. Los mismos compradores volvieron con sus hijos. Quedan 9 de 10 parcelas. Agenda tu visita.",
+      "headline": "Sin sorpresas. Todo listo.",
+      "description": "Rol propio. Entrega inmediata.",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "name": "Sin sorpresas 4:5 — Risk Removal",
+      "format": "image",
+      "image_path": "created/projects/Vista los Naranjos/meta-ads/20260320_retargeting_sin-sorpresas_4_5.jpg",
+      "primary_text": "Agua disponible, plataformas construidas, cierre perimetral listo. Rol propio por cada parcela y transferencia inmediata. Nuestro proyecto anterior se vendió al 100%. Los mismos compradores volvieron con sus hijos. Quedan 9 de 10 parcelas. Agenda tu visita.",
+      "headline": "Sin sorpresas. Todo listo.",
+      "description": "Rol propio. Entrega inmediata.",
+      "cta": "LEARN_MORE"
+    }
+  ]
+}

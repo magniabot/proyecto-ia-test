@@ -1,0 +1,15 @@
+{
+  "name": "agricola-ghl-exporter",
+  "version": "1.0.0",
+  "description": "Extrae contactos, oportunidades y conversaciones del agente IA desde GoHighLevel",
+  "type": "module",
+  "scripts": {
+    "export": "node export-crm.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

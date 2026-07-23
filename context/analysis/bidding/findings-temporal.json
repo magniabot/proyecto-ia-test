@@ -1,0 +1,254 @@
+[
+  {
+    "id": "BID-D10",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Extended-learning detection requires the bidding_strategy.learning_status field; surface manually if Google Ads UI flags this campaign as \"still learning\" >14 days.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D11",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No overlapping changes during learning.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D12",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Account has 0 data exclusion record(s). Verify any tracking outage in the last 60 days has a matching exclusion.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D13",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No strategy change recorded.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D22",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for CPC spike detection.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D23",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for trend detection.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D24",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No incremental opportunity from heuristic.",
+    "campaign_id": "22635254582",
+    "campaign": "Agrícola I Search I NB",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D10",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Extended-learning detection requires the bidding_strategy.learning_status field; surface manually if Google Ads UI flags this campaign as \"still learning\" >14 days.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D11",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No overlapping changes during learning.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D12",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Account has 0 data exclusion record(s). Verify any tracking outage in the last 60 days has a matching exclusion.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D13",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No strategy change recorded.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D22",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for CPC spike detection.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D23",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for trend detection.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D24",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No incremental opportunity from heuristic.",
+    "campaign_id": "22903927094",
+    "campaign": "Agrícola I Demand Gen",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D10",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Extended-learning detection requires the bidding_strategy.learning_status field; surface manually if Google Ads UI flags this campaign as \"still learning\" >14 days.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D11",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No overlapping changes during learning.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D12",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Account has 0 data exclusion record(s). Verify any tracking outage in the last 60 days has a matching exclusion.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D13",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No strategy change recorded.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D22",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for CPC spike detection.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D23",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No rising CPC trend.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D24",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No incremental opportunity from heuristic.",
+    "campaign_id": "23678661534",
+    "campaign": "Agrícola - Vista los Naranjos - Exact MaxC",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D10",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Extended-learning detection requires the bidding_strategy.learning_status field; surface manually if Google Ads UI flags this campaign as \"still learning\" >14 days.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D11",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No overlapping changes during learning.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D12",
+    "verdict": "INFO",
+    "severity": "low",
+    "message": "Account has 0 data exclusion record(s). Verify any tracking outage in the last 60 days has a matching exclusion.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D13",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No strategy change recorded.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D22",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for CPC spike detection.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D23",
+    "verdict": "SKIP",
+    "severity": "low",
+    "message": "Insufficient daily data for trend detection.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  },
+  {
+    "id": "BID-D24",
+    "verdict": "PASS",
+    "severity": "low",
+    "message": "No incremental opportunity from heuristic.",
+    "campaign_id": "24045254526",
+    "campaign": "Agrícola - Vista Los Naranjos - Broad tCPA",
+    "strategy": "MAXIMIZE_CONVERSIONS"
+  }
+]

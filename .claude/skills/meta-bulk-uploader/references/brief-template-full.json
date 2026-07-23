@@ -1,0 +1,94 @@
+{
+  "_instructions": "Template for full-setup mode. Fill in all required fields before running upload.js. Remove all _note/_instructions keys before using.",
+  "mode": "full-setup",
+
+  "campaign": {
+    "name": "NOMBRE PROYECTO — Conversiones",
+    "daily_budget_clp": 33000,
+    "_budget_note": "Presupuesto DIARIO en CLP. Calcular: presupuesto mensual ÷ 30.4. Ej: $1.000.000/mes ÷ 30.4 = 32.895 → usar 33000. IMPORTANTE: el valor se envía a la API exactamente como está — sin multiplicar por 100 (CLP no tiene centavos).",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "_bid_strategy_options": "LOWEST_COST_WITHOUT_CAP (sin límite, recomendado para lanzamiento) | LOWEST_COST_WITH_BID_CAP (con bid_amount) | COST_CAP (con bid_amount como target de costo)",
+    "_bid_amount_note": "Agregar bid_amount solo si bid_strategy es LOWEST_COST_WITH_BID_CAP o COST_CAP. Valor en CLP sin × 100.",
+    "status": "PAUSED"
+  },
+
+  "adsets": [
+    {
+      "key": "control",
+      "_key_note": "Identificador interno. Los anuncios referencian este valor en el campo 'adset'.",
+      "name": "NOMBRE PROYECTO — Control",
+      "status": "PAUSED"
+    },
+    {
+      "key": "test",
+      "name": "NOMBRE PROYECTO — Test",
+      "status": "PAUSED"
+    }
+  ],
+  "_adsets_note": "Puedes tener cualquier cantidad de adsets con los nombres que quieras. El campo 'key' es el identificador que usan los anuncios para asignarse.",
+
+  "adset_config": {
+    "_note": "Configuración de audiencia y conversión. Aplica igual a todos los adsets.",
+
+    "conversion_event": "LEAD",
+    "_conversion_event_options": "LEAD (formulario completado) | SCHEDULE (agendamiento)",
+
+    "pixel_id": "PIXEL_ID_DEL_CLIENTE",
+    "page_id": "FACEBOOK_PAGE_ID_DEL_CLIENTE",
+    "instagram_account_id": "INSTAGRAM_BUSINESS_ACCOUNT_ID",
+    "_instagram_note": "Opcional. Si se omite, los anuncios solo aparecen en Facebook.",
+
+    "destination_url": "https://tu-funnel-de-meta.com/pagina",
+    "_url_note": "URL del funnel de Meta. NO usar la URL de Google Ads.",
+
+    "geo_country": "CL",
+    "age_min": 25,
+    "age_max": 65,
+    "_audience_note": "Sin intereses = Broad. El algoritmo optimiza. Ver SOP-027 Step 2."
+  },
+
+  "ads": [
+    {
+      "_note": "Anuncio estático con MÚLTIPLES FORMATOS (9:16 + 4:5) como un solo anuncio vía asset_feed_spec.",
+      "name": "Ángulo 1 — Estático Multi-formato",
+      "adset": "control",
+      "format": "image",
+
+      "image_hashes": ["HASH_9_16", "HASH_4_5"],
+      "_image_hashes_note": "Array con los hashes de cada formato. Meta selecciona el más apropiado por placement. Alternativa con archivos locales: usar image_paths en vez de image_hashes.",
+      "_image_paths_alternative": "\"image_paths\": [\"context/meta-ads/creatives/imagen-9-16.jpg\", \"context/meta-ads/creatives/imagen-4-5.jpg\"]",
+
+      "primary_text": "Texto principal del anuncio. Máx ~125 chars antes del 'Ver más'. Debe enganchar en las primeras líneas.",
+      "headline": "Título corto (≤40 chars)",
+      "description": "Texto complementario opcional (≤30 chars)",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "_note": "Anuncio estático con un solo formato (image_hash único).",
+      "name": "Ángulo 2 — Imagen Única",
+      "adset": "control",
+      "format": "image",
+      "image_hash": "HASH_DE_LA_IMAGEN_EN_META",
+      "primary_texts": [
+        "Variante A del texto principal...",
+        "Variante B del texto principal..."
+      ],
+      "_primary_texts_note": "Con primary_texts[], el script crea un anuncio separado por cada texto: 'Ángulo 2 — v1', 'Ángulo 2 — v2'.",
+      "headline": "Título del anuncio",
+      "description": "Descripción corta",
+      "cta": "LEARN_MORE"
+    },
+    {
+      "_note": "Anuncio de video. Solo 9:16. Un solo video_id.",
+      "name": "Ángulo 3 — Video 9:16",
+      "adset": "test",
+      "format": "video",
+      "video_id": "VIDEO_ID_EN_META",
+      "_video_note": "Subir el video en Ads Manager primero y copiar el Video ID.",
+      "primary_text": "Texto del anuncio de video...",
+      "headline": "Título del video",
+      "description": "Descripción corta",
+      "cta": "LEARN_MORE"
+    }
+  ]
+}

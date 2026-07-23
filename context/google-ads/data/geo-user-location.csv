@@ -1,0 +1,25 @@
+campaign.name,campaign.resource_name,geographic_view.country_criterion_id,geographic_view.location_type,geographic_view.resource_name,metrics.average_cpc,metrics.clicks,metrics.conversions,metrics.conversions_value,metrics.cost,metrics.cost_per_conversion,metrics.ctr,metrics.impressions
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2152,2,customers/4760314854/geographicViews/2152~AREA_OF_INTEREST,618.30,684,14,0,422918.60,30208.47,0.18431689571544058,3711
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2152,3,customers/4760314854/geographicViews/2152~LOCATION_OF_PRESENCE,787.87,122,2,0,96120.40,48060.20,0.25,488
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2392,3,customers/4760314854/geographicViews/2392~LOCATION_OF_PRESENCE,675.00,2,0,0,1350.00,,2,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2008,2,customers/4760314854/geographicViews/2008~AREA_OF_INTEREST,580.00,2,0,0,1160.00,,0.6666666666666666,3
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2484,2,customers/4760314854/geographicViews/2484~AREA_OF_INTEREST,901.00,1,0,0,901.00,,0.5,2
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2858,2,customers/4760314854/geographicViews/2858~AREA_OF_INTEREST,696.00,1,0,0,696.00,,0.125,8
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2604,3,customers/4760314854/geographicViews/2604~LOCATION_OF_PRESENCE,212.27,3,0,0,636.80,,0.21428571428571427,14
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2032,2,customers/4760314854/geographicViews/2032~AREA_OF_INTEREST,299.06,2,0,0,598.12,,0.125,16
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2600,2,customers/4760314854/geographicViews/2600~AREA_OF_INTEREST,412.00,1,0,0,412.00,,1,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2724,2,customers/4760314854/geographicViews/2724~AREA_OF_INTEREST,,0,0,0,0.00,,0,3
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2862,2,customers/4760314854/geographicViews/2862~AREA_OF_INTEREST,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2032,3,customers/4760314854/geographicViews/2032~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,16
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2036,3,customers/4760314854/geographicViews/2036~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2068,3,customers/4760314854/geographicViews/2068~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2124,3,customers/4760314854/geographicViews/2124~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2250,3,customers/4760314854/geographicViews/2250~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2380,3,customers/4760314854/geographicViews/2380~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2442,3,customers/4760314854/geographicViews/2442~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,2
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2484,3,customers/4760314854/geographicViews/2484~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2554,3,customers/4760314854/geographicViews/2554~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2724,3,customers/4760314854/geographicViews/2724~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2756,3,customers/4760314854/geographicViews/2756~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,2
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2826,3,customers/4760314854/geographicViews/2826~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,2
+Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2840,3,customers/4760314854/geographicViews/2840~LOCATION_OF_PRESENCE,,0,0,0,0.00,,0,1

@@ -1,0 +1,7 @@
+{
+  "name": "meta-context-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Meta Marketing API data pull scripts",
+  "private": true
+}

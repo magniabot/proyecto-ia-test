@@ -1,0 +1,23 @@
+{
+  "mode": "ads-only",
+  "input": "context/meta-ads/upload-briefs/20260323_vista-los-naranjos_ads-only.json",
+  "dry_run": false,
+  "created_at": "2026-03-23T22:56:30.369Z",
+  "campaign_id": null,
+  "adsets": {},
+  "ads": [],
+  "errors": [
+    {
+      "name": "Captación 10 propietarios 1:1 — USPs",
+      "error": "[100] Invalid parameter (subcode: 1443050)"
+    },
+    {
+      "name": "Captación 10 propietarios 4:5 — Cold",
+      "error": "[100] Invalid parameter (subcode: 1443050)"
+    },
+    {
+      "name": "Urgencia 9 disponibles 1:1 — Hot",
+      "error": "[100] Invalid parameter (subcode: 1443050)"
+    }
+  ]
+}

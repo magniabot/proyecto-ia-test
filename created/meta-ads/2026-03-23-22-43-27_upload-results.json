@@ -1,0 +1,50 @@
+{
+  "mode": "full-setup",
+  "input": "context/meta-ads/upload-briefs/20260323_vista-los-naranjos_full-setup.json",
+  "dry_run": true,
+  "created_at": "2026-03-23T22:43:27.425Z",
+  "campaign_id": "dry-1",
+  "adsets": {
+    "control": "dry-2",
+    "test": "dry-3"
+  },
+  "ads": [
+    {
+      "name": "Captación 10 propietarios 1:1 — USPs",
+      "adset": "control",
+      "creative_id": "dry-5",
+      "ad_id": "dry-6"
+    },
+    {
+      "name": "Captación 10 propietarios 4:5 — Cold",
+      "adset": "control",
+      "creative_id": "dry-8",
+      "ad_id": "dry-9"
+    },
+    {
+      "name": "Urgencia 9 disponibles 1:1 — Hot",
+      "adset": "control",
+      "creative_id": "dry-11",
+      "ad_id": "dry-12"
+    },
+    {
+      "name": "Urgencia 9 disponibles 4:5 — Hot",
+      "adset": "test",
+      "creative_id": "dry-14",
+      "ad_id": "dry-15"
+    },
+    {
+      "name": "Sin sorpresas 1:1 — Risk Removal",
+      "adset": "test",
+      "creative_id": "dry-17",
+      "ad_id": "dry-18"
+    },
+    {
+      "name": "Sin sorpresas 4:5 — Risk Removal",
+      "adset": "test",
+      "creative_id": "dry-20",
+      "ad_id": "dry-21"
+    }
+  ],
+  "errors": []
+}

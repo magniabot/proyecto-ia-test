@@ -1,0 +1,29 @@
+{
+  "mode": "ads-only",
+  "input": "context/meta-ads/upload-briefs/20260323_vista-los-naranjos_ads-only-test.json",
+  "dry_run": false,
+  "created_at": "2026-03-23T23:09:36.509Z",
+  "campaign_id": null,
+  "adsets": {},
+  "ads": [
+    {
+      "name": "Urgencia 9 disponibles 4:5 — Hot",
+      "adset": "default",
+      "creative_id": "4398181167083844",
+      "ad_id": "120241442323730559"
+    },
+    {
+      "name": "Sin sorpresas 1:1 — Risk Removal",
+      "adset": "default",
+      "creative_id": "1961483177810135",
+      "ad_id": "120241442324970559"
+    },
+    {
+      "name": "Sin sorpresas 4:5 — Risk Removal",
+      "adset": "default",
+      "creative_id": "750209488028361",
+      "ad_id": "120241442325840559"
+    }
+  ],
+  "errors": []
+}

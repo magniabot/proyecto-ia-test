@@ -1,0 +1,6 @@
+campaign.advertising_channel_type,campaign.bidding_strategy_type,campaign.id,campaign.name,campaign.resource_name,campaign.status,campaign_budget.amount,campaign_budget.resource_name,metrics.average_cpc,metrics.clicks,metrics.conversions,metrics.conversions_value,metrics.cost,metrics.ctr,metrics.impressions,metrics.search_impression_share
+2,10,23678661534,Agrícola I Search I NB I Vista los Naranjos,customers/4760314854/campaigns/23678661534,2,18000.00,customers/4760314854/campaignBudgets/15453200394,547.76,981,24.980494,0,537348.48,0.19798183652875884,4955,0.7105321754620352
+2,10,22635254582,Agrícola I Search I NB,customers/4760314854/campaigns/22635254582,3,18000.00,customers/4760314854/campaignBudgets/14618376941,,0,0,0,0.00,,0,
+2,9,22764262259,Agrícola I Search I NB Test Landing Page,customers/4760314854/campaigns/22764262259,2,18000.00,customers/4760314854/campaignBudgets/14618376941,,0,0,0,0.00,,0,
+14,10,22903927094,Agrícola I Demand Gen,customers/4760314854/campaigns/22903927094,3,10000.00,customers/4760314854/campaignBudgets/14840619242,,0,0,0,0.00,,0,
+2,10,23678356500,Agrícola I Search I NB I Vista Los Naranjos,customers/4760314854/campaigns/23678356500,4,18000.00,customers/4760314854/campaignBudgets/15448172156,,0,0,0,0.00,,0,

@@ -1,0 +1,326 @@
+{
+  "version": "1.0",
+  "source": "sops/Product Feed Data Specification Reference.md + sops/Product Feed Optimization Guidelines.md",
+  "note": "Single source of truth for TWO lenses over the same attribute set. (1) VALIDITY (attributes.js): the per-value `checks` below — present-only. (2) PRESENCE/RELEVANCE (completeness.js): the optional `completeness` block on each attribute + the `presence` config below — is the attribute present where it is EXPECTED for this account's vertical? Non-owned-for-validity attributes (title, description, image_link, price, availability, link) carry NO `checks` (their validity belongs to title-desc / images / errors) but DO appear in `presence.hard_required` because completeness proactively checks their presence. Severity tiers (critical/important/recommended/optional) come from the Optimization Guidelines priority framework. Cross-attribute dependency integrity is coded in attributes.js, not here.",
+  "low_quality_values": [
+    "n/a", "na", "none", "null", "-", "--", ".", "various", "assorted", "diverse", "misc",
+    "onbekend", "unknown", "overig", "other", "default", "standaard", "geen", "nvt", "n.v.t.",
+    "see image", "see picture", "zie afbeelding", "multicolor", "multicolour", "multi", "diverse kleuren"
+  ],
+  "presence": {
+    "note": "Drives the completeness module. `relevance` keys map to predicates in completeness.js; `tier` 1 drives the score (a relevant gap is a fail), `tier` 2 is reported as upside only (nice-to-have). `market_gated` attributes are tier 1 only in `required_size_markets`, else demoted to tier 2. `dimensioned_category` keys gate product dimension/weight attributes to the `gpc_top_level_groups.dimensioned` verticals; `demand_gen_surface` gates short_title/lifestyle_image_link on the account running a Demand Gen, YouTube/Video, or Performance Max campaign (read from context/google-ads/data/campaigns.csv).",
+    "hard_required": [
+      { "field": "product_id", "feed_name": "id" },
+      { "field": "title", "feed_name": "title" },
+      { "field": "description", "feed_name": "description" },
+      { "field": "link", "feed_name": "link" },
+      { "field": "image_link", "feed_name": "image_link" },
+      { "field": "price", "feed_name": "price" },
+      { "field": "availability", "feed_name": "availability" }
+    ],
+    "required_size_markets": ["BR", "FR", "DE", "JP", "GB", "UK", "US", "USA"],
+    "eu_markets": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "EL", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "UK"],
+    "used_condition_values": ["used", "refurbished", "refurb"],
+    "branded_share_threshold_pct": 30,
+    "gpc_top_level_groups": {
+      "apparel": ["Apparel & Accessories"],
+      "media": ["Media"],
+      "unit_pricing": ["Food, Beverages & Tobacco", "Hardware", "Office Supplies", "Health & Beauty"],
+      "dimensioned": ["Furniture", "Home & Garden", "Hardware", "Sporting Goods", "Baby & Toddler", "Vehicles & Parts", "Business & Industrial"]
+    },
+    "energy_regulated_path_keywords": [
+      "Light Bulbs", "Lighting", "Refrigerators", "Freezers", "Washers & Dryers", "Washing Machines",
+      "Dishwashers", "Ovens", "Ranges", "Range Hoods", "Air Conditioners", "Water Heaters",
+      "Televisions", "Electronic Displays", "Monitors", "Wine Refrigerators", "Tires", "Tyres",
+      "Ventilation Fans", "Space Heaters"
+    ]
+  },
+  "attributes": {
+    "product_id": {
+      "feed_name": "id",
+      "tier": "critical",
+      "checks": [
+        { "type": "id_format", "limit": 50, "fixability": "external", "confidence": "high" }
+      ]
+    },
+    "gtin": {
+      "feed_name": "gtin",
+      "tier": "critical",
+      "completeness": { "relevance": "branded", "tier": 2 },
+      "checks": [
+        { "type": "gs1", "fixability": "external", "confidence": "high" }
+      ]
+    },
+    "mpn": {
+      "feed_name": "mpn",
+      "tier": "important",
+      "completeness": { "relevance": "branded_no_gtin", "tier": 2 },
+      "checks": [
+        { "type": "char_max", "limit": 70, "fixability": "source-required", "confidence": "high" }
+      ]
+    },
+    "identifier_exists": {
+      "feed_name": "identifier_exists",
+      "tier": "important",
+      "checks": [
+        { "type": "boolean", "fixability": "source-required", "confidence": "high" }
+      ]
+    },
+    "brand": {
+      "feed_name": "brand",
+      "tier": "important",
+      "completeness": { "relevance": "branded", "tier": 2 },
+      "checks": [
+        { "type": "char_max", "limit": 70, "fixability": "source-required", "confidence": "high" },
+        { "type": "low_quality", "fixability": "source-required", "confidence": "medium" }
+      ]
+    },
+    "google_product_category": {
+      "feed_name": "google_product_category",
+      "tier": "important",
+      "completeness": { "relevance": "always", "tier": 1 },
+      "checks": [
+        { "type": "path_or_id", "fixability": "optimizer:strategy", "optimizer_action": "taxonomy", "confidence": "medium" }
+      ]
+    },
+    "product_type": {
+      "feed_name": "product_type",
+      "tier": "important",
+      "completeness": { "relevance": "always", "tier": 1 },
+      "checks": [
+        { "type": "min_depth", "min": 2, "fixability": "optimizer:strategy", "optimizer_action": "product-type", "confidence": "medium" },
+        { "type": "char_max", "limit": 750, "fixability": "optimizer:strategy", "optimizer_action": "product-type", "confidence": "high" }
+      ]
+    },
+    "custom_label_0": { "feed_name": "custom_label_0", "tier": "recommended", "checks": [ { "type": "char_max", "limit": 100, "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "high" }, { "type": "low_quality", "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "medium" } ] },
+    "custom_label_1": { "feed_name": "custom_label_1", "tier": "recommended", "checks": [ { "type": "char_max", "limit": 100, "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "high" }, { "type": "low_quality", "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "medium" } ] },
+    "custom_label_2": { "feed_name": "custom_label_2", "tier": "recommended", "checks": [ { "type": "char_max", "limit": 100, "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "high" }, { "type": "low_quality", "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "medium" } ] },
+    "custom_label_3": { "feed_name": "custom_label_3", "tier": "recommended", "checks": [ { "type": "char_max", "limit": 100, "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "high" }, { "type": "low_quality", "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "medium" } ] },
+    "custom_label_4": { "feed_name": "custom_label_4", "tier": "recommended", "checks": [ { "type": "char_max", "limit": 100, "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "high" }, { "type": "low_quality", "fixability": "optimizer:strategy", "optimizer_action": "custom-label", "confidence": "medium" } ] },
+    "gender": {
+      "feed_name": "gender",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel", "tier": 1, "market_gated": true },
+      "checks": [
+        { "type": "enum", "values": ["male", "female", "unisex"], "fixability": "optimizer:derivable", "optimizer_action": "gender", "confidence": "high" }
+      ]
+    },
+    "age_group": {
+      "feed_name": "age_group",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel", "tier": 1, "market_gated": true },
+      "checks": [
+        { "type": "enum", "values": ["newborn", "infant", "toddler", "kids", "adult"], "fixability": "optimizer:derivable", "optimizer_action": "age-group", "confidence": "high" }
+      ]
+    },
+    "color": {
+      "feed_name": "color",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel_or_variant", "tier": 1, "market_gated": true },
+      "checks": [
+        { "type": "forbidden_regex", "pattern": "#[0-9a-fA-F]{3,6}", "label": "looks like a hex color code (use plain color names)", "fixability": "optimizer:derivable", "optimizer_action": "color", "confidence": "high" },
+        { "type": "max_segments", "separator": "/", "max": 3, "fixability": "optimizer:derivable", "optimizer_action": "color", "confidence": "high" },
+        { "type": "segment_char_max", "separator": "/", "per_limit": 40, "max_total": 100, "fixability": "optimizer:derivable", "optimizer_action": "color", "confidence": "high" },
+        { "type": "low_quality", "fixability": "optimizer:derivable", "optimizer_action": "color", "confidence": "medium" }
+      ]
+    },
+    "size": {
+      "feed_name": "size",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel_or_variant", "tier": 1, "market_gated": true },
+      "checks": [
+        { "type": "char_max", "limit": 100, "fixability": "optimizer:derivable", "optimizer_action": "size", "confidence": "high" },
+        { "type": "low_quality", "fixability": "optimizer:derivable", "optimizer_action": "size", "confidence": "medium" }
+      ]
+    },
+    "size_system": {
+      "feed_name": "size_system",
+      "tier": "recommended",
+      "checks": [
+        { "type": "enum", "values": ["AU", "BR", "CN", "DE", "EU", "FR", "IT", "JP", "MEX", "UK", "US"], "fixability": "optimizer:derivable", "optimizer_action": "size-system", "confidence": "high" }
+      ]
+    },
+    "size_type": {
+      "feed_name": "size_type",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel", "tier": 2 },
+      "checks": [
+        { "type": "enum_multi", "values": ["regular", "petite", "plus", "tall", "big", "maternity"], "separator": "/", "max_items": 2, "fixability": "optimizer:derivable", "optimizer_action": "size-type", "confidence": "high" }
+      ]
+    },
+    "material": {
+      "feed_name": "material",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel", "tier": 2 },
+      "checks": [
+        { "type": "char_max", "limit": 200, "fixability": "optimizer:derivable", "optimizer_action": "material", "confidence": "high" },
+        { "type": "max_segments", "separator": "/", "max": 3, "fixability": "optimizer:derivable", "optimizer_action": "material", "confidence": "high" },
+        { "type": "low_quality", "fixability": "optimizer:derivable", "optimizer_action": "material", "confidence": "medium" }
+      ]
+    },
+    "pattern": {
+      "feed_name": "pattern",
+      "tier": "recommended",
+      "completeness": { "relevance": "apparel", "tier": 2 },
+      "checks": [
+        { "type": "char_max", "limit": 100, "fixability": "optimizer:derivable", "optimizer_action": "pattern", "confidence": "high" },
+        { "type": "low_quality", "fixability": "optimizer:derivable", "optimizer_action": "pattern", "confidence": "medium" }
+      ]
+    },
+    "item_group_id": {
+      "feed_name": "item_group_id",
+      "tier": "recommended",
+      "completeness": { "relevance": "variant_signal", "tier": 1 },
+      "checks": [
+        { "type": "id_format", "limit": 50, "fixability": "source-required", "confidence": "high" }
+      ]
+    },
+    "condition": {
+      "feed_name": "condition",
+      "tier": "important",
+      "completeness": { "relevance": "used_catalog", "tier": 1 },
+      "checks": [
+        { "type": "enum", "values": ["new", "refurbished", "used"], "fixability": "optimizer:derivable", "optimizer_action": "condition", "confidence": "high" }
+      ]
+    },
+    "adult": {
+      "feed_name": "adult",
+      "tier": "recommended",
+      "checks": [ { "type": "boolean", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "multipack": {
+      "feed_name": "multipack",
+      "tier": "recommended",
+      "checks": [ { "type": "numeric_int", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "is_bundle": {
+      "feed_name": "is_bundle",
+      "tier": "recommended",
+      "checks": [ { "type": "boolean", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "unit_pricing_measure": {
+      "feed_name": "unit_pricing_measure",
+      "tier": "recommended",
+      "completeness": { "relevance": "unit_pricing_category", "tier": 2 },
+      "checks": [
+        { "type": "measure_format", "units": ["oz", "lb", "mg", "g", "kg", "floz", "pt", "qt", "gal", "ml", "cl", "l", "in", "ft", "yd", "cm", "m", "sqft", "sqm", "ct"], "fixability": "source-required", "confidence": "high" }
+      ]
+    },
+    "unit_pricing_base_measure": {
+      "feed_name": "unit_pricing_base_measure",
+      "tier": "recommended",
+      "checks": [
+        { "type": "measure_base", "allowed": [1, 2, 4, 8, 10, 100], "fixability": "source-required", "confidence": "high" }
+      ]
+    },
+    "cost_of_goods_sold": {
+      "feed_name": "cost_of_goods_sold",
+      "tier": "recommended",
+      "completeness": { "relevance": "always", "tier": 2 },
+      "checks": [ { "type": "currency_format", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "availability_date": {
+      "feed_name": "availability_date",
+      "tier": "important",
+      "checks": [ { "type": "iso_datetime", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "expiration_date": {
+      "feed_name": "expiration_date",
+      "tier": "optional",
+      "checks": [ { "type": "iso_datetime", "fixability": "source-required", "confidence": "high" } ]
+    },
+    "shipping_weight": {
+      "feed_name": "shipping_weight",
+      "tier": "recommended",
+      "checks": [ { "type": "measure_format", "units": ["lb", "oz", "g", "kg"], "fixability": "source-required", "confidence": "high" } ]
+    },
+    "shipping_length": { "feed_name": "shipping_length", "tier": "recommended", "checks": [ { "type": "measure_format", "units": ["cm", "in"], "fixability": "source-required", "confidence": "high" } ] },
+    "shipping_width": { "feed_name": "shipping_width", "tier": "recommended", "checks": [ { "type": "measure_format", "units": ["cm", "in"], "fixability": "source-required", "confidence": "high" } ] },
+    "shipping_height": { "feed_name": "shipping_height", "tier": "recommended", "checks": [ { "type": "measure_format", "units": ["cm", "in"], "fixability": "source-required", "confidence": "high" } ] },
+    "energy_efficiency_class": {
+      "feed_name": "energy_efficiency_class",
+      "tier": "important",
+      "completeness": { "relevance": "energy_eu", "tier": 1 },
+      "checks": [ { "type": "enum", "values": ["A+++", "A++", "A+", "A", "B", "C", "D", "E", "F", "G"], "case_sensitive": true, "fixability": "source-required", "confidence": "high" } ]
+    },
+    "min_energy_efficiency_class": { "feed_name": "min_energy_efficiency_class", "tier": "important", "checks": [ { "type": "enum", "values": ["A+++", "A++", "A+", "A", "B", "C", "D", "E", "F", "G"], "case_sensitive": true, "fixability": "source-required", "confidence": "high" } ] },
+    "max_energy_efficiency_class": { "feed_name": "max_energy_efficiency_class", "tier": "important", "checks": [ { "type": "enum", "values": ["A+++", "A++", "A+", "A", "B", "C", "D", "E", "F", "G"], "case_sensitive": true, "fixability": "source-required", "confidence": "high" } ] },
+    "certification": {
+      "feed_name": "certification",
+      "tier": "important",
+      "completeness": { "relevance": "energy_eu", "tier": 1 },
+      "checks": [ { "type": "certification_format", "fixability": "external", "confidence": "medium" } ]
+    },
+    "excluded_destination": {
+      "feed_name": "excluded_destination",
+      "tier": "optional",
+      "checks": [ { "type": "enum_multi", "values": ["Shopping_ads", "Display_ads", "Local_inventory_ads", "Free_listings", "Free_local_listings", "Cloud_retail", "Local_cloud_retail"], "separator": "|", "case_sensitive": true, "fixability": "source-required", "confidence": "high" } ]
+    },
+    "included_destination": {
+      "feed_name": "included_destination",
+      "tier": "optional",
+      "checks": [ { "type": "enum_multi", "values": ["Shopping_ads", "Display_ads", "Local_inventory_ads", "Free_listings", "Free_local_listings", "Cloud_retail", "Local_cloud_retail"], "separator": "|", "case_sensitive": true, "fixability": "source-required", "confidence": "high" } ]
+    },
+    "pause": {
+      "feed_name": "pause",
+      "tier": "optional",
+      "checks": [ { "type": "enum", "values": ["ads", "all"], "fixability": "source-required", "confidence": "high" } ]
+    },
+    "product_length": {
+      "feed_name": "product_length",
+      "tier": "recommended",
+      "completeness": { "relevance": "dimensioned_category", "tier": 2 },
+      "checks": []
+    },
+    "product_width": {
+      "feed_name": "product_width",
+      "tier": "recommended",
+      "completeness": { "relevance": "dimensioned_category", "tier": 2 },
+      "checks": []
+    },
+    "product_height": {
+      "feed_name": "product_height",
+      "tier": "recommended",
+      "completeness": { "relevance": "dimensioned_category", "tier": 2 },
+      "checks": []
+    },
+    "product_weight": {
+      "feed_name": "product_weight",
+      "tier": "recommended",
+      "completeness": { "relevance": "dimensioned_category", "tier": 2 },
+      "checks": []
+    },
+    "product_highlight": {
+      "feed_name": "product_highlight",
+      "tier": "recommended",
+      "completeness": { "relevance": "always", "tier": 2 },
+      "checks": []
+    },
+    "product_detail": {
+      "feed_name": "product_detail",
+      "tier": "recommended",
+      "completeness": { "relevance": "always", "tier": 2 },
+      "checks": []
+    },
+    "short_title": {
+      "feed_name": "short_title",
+      "tier": "recommended",
+      "completeness": { "relevance": "demand_gen_surface", "tier": 2 },
+      "checks": []
+    },
+    "lifestyle_image_link": {
+      "feed_name": "lifestyle_image_link",
+      "tier": "recommended",
+      "completeness": { "relevance": "demand_gen_surface", "tier": 2 },
+      "checks": []
+    }
+  },
+  "content_limits": {
+    "note": "Character/structure limits for the feed-optimizer content action. Single source of truth for the content prose validator (validate-content.js). Mostly Google Merchant spec maxima, EXCEPT `description` which is a content-quality TARGET RANGE (char_min/char_max 500-1000): Google allows up to 5000, but the optimizer targets 500-1000 chars; under-min or over-max is demoted to exceptions. Kept OUTSIDE attributes[] so the auditor attribute/completeness loops do not pick these up.",
+    "title": { "char_max": 150, "front_load": 70 },
+    "description": { "char_min": 500, "char_max": 1000, "front_load": 160 },
+    "short_title": { "char_max": 65 },
+    "product_highlight": { "item_char_max": 150, "min_items": 2, "max_items": 100 },
+    "product_detail": { "section_name_char_max": 140, "attribute_name_char_max": 140, "attribute_value_char_max": 1000, "max_items": 1000 }
+  }
+}
